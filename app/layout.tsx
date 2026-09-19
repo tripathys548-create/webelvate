@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const bodyFont = Inter({
@@ -10,6 +10,12 @@ const bodyFont = Inter({
 const headingFont = Plus_Jakarta_Sans({
   variable: "--font-heading",
   subsets: ["latin"],
+});
+
+const serifFont = Playfair_Display({
+  variable: "--font-serif",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
 });
 
 const siteUrl = "https://www.webelvate.com";
@@ -61,14 +67,14 @@ const localBusinessSchema = {
     addressRegion: "Odisha",
     addressCountry: "IN",
   },
-  telephone: "+91-8093326661",
+  telephone: "+91-7077652489",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${bodyFont.variable} ${headingFont.variable} h-full antialiased`}
+      className={`${bodyFont.variable} ${headingFont.variable} ${serifFont.variable} h-full antialiased`}
     >
       <head>
         <script

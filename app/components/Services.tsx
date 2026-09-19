@@ -1,51 +1,57 @@
-import { LanguageIcon, MapPinIcon, SupportIcon, WebsiteIcon } from "./icons";
+import { ChatIcon, LanguageIcon, MapPinIcon, SearchIcon, SupportIcon, WebsiteIcon } from "./icons";
 import { Reveal } from "./Reveal";
 
 const services = [
   {
-    title: "Website design & build",
-    description:
-      "A clean, mobile-friendly website for your shop, clinic, hotel, or business — built to load fast on an average phone connection.",
+    title: "Website Design & Development",
+    description: "Fast, responsive websites designed around your business.",
     icon: WebsiteIcon,
   },
   {
-    title: "WhatsApp & Google Maps setup",
-    description:
-      "Click-to-chat WhatsApp buttons and a properly configured Google Business Profile, so customers can find and reach you easily.",
+    title: "WhatsApp Integration",
+    description: "One-click WhatsApp communication so customers can contact you instantly.",
+    icon: ChatIcon,
+  },
+  {
+    title: "Google Maps & Business Setup",
+    description: "Help customers discover your business on Google.",
     icon: MapPinIcon,
   },
   {
-    title: "Content in Odia or English",
-    description:
-      "Copy written in whichever language your customers actually use — including Sambalpuri Odia where it fits your audience.",
+    title: "Local SEO",
+    description: "Structure your website so local customers can find you.",
+    icon: SearchIcon,
+  },
+  {
+    title: "Odia & English Content",
+    description: "Content written for the language your customers actually use.",
     icon: LanguageIcon,
   },
   {
-    title: "Ongoing support",
-    description:
-      "Once your site is live, we handle updates, fixes, and hosting questions — you don't need to touch any code.",
+    title: "Ongoing Support",
+    description: "Updates, fixes and hosting support after launch.",
     icon: SupportIcon,
   },
 ];
 
 export function Services() {
   return (
-    <section id="services" className="border-b border-zinc-100">
+    <section id="services" className="border-b border-zinc-100 bg-[#FAF7F2]">
       <div className="mx-auto w-full max-w-6xl px-6 py-20">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-[#F43F5E]">
-          What we do
-        </h2>
-        <p className="font-display mt-2 max-w-xl text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl">
-          Everything your business needs to be found online.
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#BE123C]">
+          Ch. 02 — What we do
         </p>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+        <h2 className="font-serif mt-3 max-w-xl text-3xl font-semibold text-[#172B4D] sm:text-4xl">
+          Everything your business needs to be found online.
+        </h2>
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <Reveal key={service.title}>
-              <div className="h-full rounded-2xl border border-zinc-100 bg-zinc-50 p-6 transition-shadow hover:shadow-md hover:shadow-zinc-900/5">
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-white text-[#F43F5E] ring-1 ring-zinc-100">
-                  <service.icon className="h-6 w-6" />
+              <div className="h-full rounded-2xl border border-zinc-200 bg-white p-6 transition-shadow hover:shadow-md hover:shadow-zinc-900/5">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#FDECEF] text-[#BE123C]">
+                  <service.icon className="h-5 w-5" />
                 </span>
-                <h3 className="mt-4 text-lg font-semibold text-zinc-900">
+                <h3 className="mt-4 text-base font-semibold text-[#172B4D]">
                   {service.title}
                 </h3>
                 <p className="mt-2 text-sm leading-6 text-zinc-600">

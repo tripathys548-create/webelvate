@@ -1,4 +1,4 @@
-export const WHATSAPP_NUMBER = "918093326661";
+export const WHATSAPP_NUMBER = "917077652489";
 const WHATSAPP_MESSAGE =
   "Hi WebElvate, I'd like a free sample website for my business.";
 export const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
@@ -19,22 +19,17 @@ export function WhatsAppIcon({ className }: { className?: string }) {
   );
 }
 
-export function WhatsAppButton({
-  children,
-  className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
+export function FloatingWhatsApp() {
   return (
     <a
       href={WHATSAPP_HREF}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center justify-center gap-2 rounded-full bg-[#22c55e] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#16a34a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#16a34a] ${className}`}
+      aria-label="Chat on WhatsApp"
+      className="fixed bottom-5 right-5 z-30 flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-green-900/25 transition-transform hover:-translate-y-0.5"
     >
-      <WhatsAppIcon className="h-4 w-4" />
-      {children}
+      <WhatsAppIcon className="h-5 w-5" />
+      <span className="hidden sm:inline">Chat on WhatsApp</span>
     </a>
   );
 }
