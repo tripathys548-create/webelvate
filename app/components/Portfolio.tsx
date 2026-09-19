@@ -1,21 +1,23 @@
 import Image from "next/image";
-import { GearIcon, PhoneShopIcon, ToothIcon } from "./icons";
+import { GearIcon } from "./icons";
 import { Reveal } from "./Reveal";
 
 const portfolio = [
   {
-    name: "My Choice Mobile Shop",
-    url: "https://mychoicemobileshop.webelvate.com",
-    description: "Mobile phone & accessories retailer",
-    icon: PhoneShopIcon,
-    live: false,
+    name: "CareerCraft",
+    url: "https://careercraftt.webelvate.com",
+    description: "AI LinkedIn & resume optimization",
+    icon: GearIcon,
+    live: true,
+    image: "/portfolio/careercraft.png",
   },
   {
-    name: "First Smile Dental",
-    url: "https://firstsmiledental.webelvate.com",
-    description: "Dental clinic",
-    icon: ToothIcon,
-    live: false,
+    name: "RegWorld",
+    url: "https://regworldcommsind.webelvate.com",
+    description: "Regulatory reporting community",
+    icon: GearIcon,
+    live: true,
+    image: "/portfolio/regworld.png",
   },
   {
     name: "Bharati Machinery",
