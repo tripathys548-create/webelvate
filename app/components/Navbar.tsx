@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { WhatsAppButton } from "./whatsapp";
 
 const links = [
@@ -11,9 +12,15 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-10 border-b border-zinc-100 bg-white/90 backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#top" className="font-display text-lg font-bold tracking-tight">
-          <span className="text-[#172B4D]">Web</span>
-          <span className="text-[#F43F5E]">Elvate</span>
+        <a href="#top" className="flex items-center">
+          <Image
+            src="/webelvate-logo.png"
+            alt="WebElvate — Higher Together"
+            width={348}
+            height={118}
+            priority
+            className="h-9 w-auto"
+          />
         </a>
         <nav className="hidden gap-8 text-sm font-medium text-zinc-600 sm:flex">
           {links.map((link) => (
